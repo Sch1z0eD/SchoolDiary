@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Школьный дневник - зарегистрировать пользователя</title>
+    <th:block th:insert="fragments/imports :: head"></th:block>
+    <th:block th:insert="fragments/imports :: student-liks"></th:block>
+</head>
+<body>
+<th:block th:insert="fragments/components :: nav"></th:block>
+<div class="main-wrapper">
+    <div class="row form-basic mt-3 justify-content-center">
+        <div class="col-xl-6 col-lg-6 col-md-10 col-sm-12">
+            <div id="success-msg" class="alert alert-success mb-4" role="alert">
+                Пользователь успешно создан!
+            </div>
+            <h4>Создать нового ученика</h4>
+            <div class="input-group mb-3">
+                <input type="text" id="first-name" class="form-control rounded-right" placeholder="имя">
+                <div class="valid-feedback">
+                    Хорошо!
+                </div>
+                <div class="invalid-feedback">
+                    Пожалуйста, укажите имя.
+                </div>
+            </div>
+            <div class="input-group mb-3">
+                <input type="text" id="last-name" class="form-control rounded-right" placeholder="Фамилия">
+                <div class="valid-feedback">
+                    Хорошо!
+                </div>
+                <div class="invalid-feedback">
+                    Пожалуйста, укажите фамилию.
+                </div>
+            </div>
+            <div class="input-group mb-3">
+                <input type="text" id="email" class="form-control rounded-right" placeholder="почта">
+                <span class="input-group-text" id="mail">for@example.com</span>
+                <div class="valid-feedback">
+                    Хорошо!
+                </div>
+                <div class="invalid-feedback">
+                    Пожалуйста, укажите адрес электронной почты.
+                </div>
+            </div>
+            <label for="birth-date" class="form-label">Дата рождения</label>
+            <div class="input-group mb-3">
+                <input type="date" id="birth-date" class="form-control datepicker rounded-right"
+                       placeholder="Дата рождения" min="1960-01-01" max="2005-12-31">
+                <span class="input-group-text">Дата рождения</span>
+                <div class="valid-feedback">
+                    Хорошо!
+                </div>
+                <div class="invalid-feedback">
+                    Пожалуйста, укажите дату между (1960-2005).
+                </div>
+            </div>
+            <button type="button" class="btn btn-secondary" onclick="addStudent()">Добавить</button>
+        </div>
+    </div>
+</div>
+</body>
+<th:block th:insert="fragments/imports :: js_import"></th:block>
+
+</html>

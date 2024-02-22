@@ -1,0 +1,23 @@
+    <!DOCTYPE html>
+    <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org">
+    <head>
+        <title>Школьный дневник</title>
+        <th:block th:insert="fragments/imports :: head"></th:block>
+    </head>
+    <body>
+    <th:block th:insert="fragments/components :: nav"></th:block>
+    <div class="main-wrapper justify-content-center">
+        <a id="button-top"></a>
+        <h2>Школьный дневник:</h2>
+
+        <div class="col-8 mt-3 custom-jumbotron">
+            <div class="h-100 p-5 bg-light border rounded-3">
+                <p>Приложение используется для просмотра и добавления учеников, а также позволяет отображать оценки.</p>
+                <p><a th:href="@{/doc}">описание работы</a></p>
+            </div>
+        </div>
+    </div>
+    </body>
+    <th:block th:insert="fragments/imports :: js_import"></th:block>
+
+    </html>

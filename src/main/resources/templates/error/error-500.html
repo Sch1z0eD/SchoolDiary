@@ -1,0 +1,19 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Школьный дневник - Страница ошибок</title>
+    <th:block th:insert="fragments/imports.html :: head"></th:block>
+</head>
+<body>
+<th:block th:insert="fragments/components :: nav"></th:block>
+<div class="container-fluid">
+    <div class="justify-content-center error-page">
+        <h5>ошибка 500</h5><br>
+        <a class="error-page-link" th:href="@{/}">Извините :( Ссылка не работает или страница была перемещена - вернуться
+            домой</a>
+    </div>
+</div>
+</body>
+</html>
